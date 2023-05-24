@@ -1,5 +1,4 @@
 <script>
-    import {browser} from '$app/environment';
 
     export let form;
     
@@ -105,8 +104,15 @@
     
     </form>
 
-     <form method="post" action="?/OAuth2">
-        <button type="submit">Use Google Instead</button>
+     <form class="auth-form" method="post" action="?/OAuth2">
+        <div>
+            <p>Or</p>
+            <button class="btn-auth"  type="submit">
+            <img class="btn-auth-img" src='/google_signin_buttons/web/1x/btn_google_signin_dark_pressed_web.png' alt='google sign in'/>
+            </button>
+            <p>instead</p>
+        </div>
+
     </form> 
 
     </div>
@@ -114,9 +120,9 @@
     
     <style>
         div{
-            color: #FFF;
+            color: #000000;
             margin-bottom: .5em;
-            text-shadow: 0 0 2px #000000;
+            text-shadow: 0 0 2px #ffffff;
         }
         label{
             padding-right: .5em;
@@ -137,15 +143,40 @@
             background-color: #4d4c4c;
             transition: all 0.3s ease-in;
         }
+
         span{
-            color: #ffffff;
+            color: #000000;
             border-radius: 115px;
         }
         span:hover{
-            color: rgba(255, 255, 255, 0.7);
+            color: rgba(0, 0, 0, 0.5);
+        }
+        .btn-auth-img:hover{
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+
+        }
+        .btn-auth{
+            border:0;
+            background-color: rgba(84, 81, 81, 0.0);
+            padding:.01em;
+        }
+        .btn-auth:hover{
+            border:0;
+            padding:.01em;
+            text-decoration: none;
+            background-color: rgba(84, 81, 81, 0.0);
+        }
+        .auth-form{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .auth-form p{
+            margin:0;
         }
         .sign-in-wrapper{
-            margin-top:2.5em;
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
@@ -158,7 +189,6 @@
             
         }
         .sign-in-content{
-            margin-top: 2em;
             max-width: 350px;
             background-color: rgba(84, 81, 81, 0.35);
             padding:1em;
