@@ -37,7 +37,7 @@ export const GET = async ({locals,  url, cookies, request  }) => {
     try {
         console.log(provider)
         await locals.pb?.collection('users')
-            .authWithOAuth2Code(provider.name, code, expectedVerifier, redirectURL,{username:'',name:'john smith'});
+            .authWithOAuth2Code(provider.name, code, expectedVerifier, redirectURL,{username:'',name:'My Awesome User'});
     } catch (err) {
         console.log('Error logging in with OAuth2 user', err);
     }
