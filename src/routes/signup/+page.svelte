@@ -11,9 +11,6 @@
     $:passError = (password?.length && confirm?.length)? (password !== confirm)? true: false : false;
 
 
-
-
-      
     </script>
     
     
@@ -110,7 +107,7 @@
             <button class="btn-auth"  type="submit">
             <img class="btn-auth-img" src='/google_signin_buttons/web/1x/btn_google_signin_dark_pressed_web.png' alt='google sign in'/>
             </button>
-            <p>instead</p>
+
         </div>
 
     </form> 
